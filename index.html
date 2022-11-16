@@ -5,185 +5,364 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebStudio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="manifest" href="favicon/site.webmanifest">
+        <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+        
         <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- Header begin -->
-    <header class="header">
-        <nav class="nav">
-            <a href="index.html" class="logo"><span class="blue">Web</span>Studio</a>
-            <a href="index.html" class="mnu">Студія</a>
-            <a href="index.html" class="mnu">Портфоліо</a>
-            <a href="index.html" class="mnu">Контакти</a>
-        </nav>
-        <div class="header-contact">
-            <a href="mailto:info@devstudio.com" class="mailto black contact">info@devstudio.com</a>
-            <a href="tel:+380961111111" class="tel black">+38 096 111 11 11</a>
-        </div>
-    </header>
+<header class="header">
+    <nav class="nav">
+        <a href="index.html" class="logo"><span class="blue">Web</span>Studio</a>
+        <ul class="menu">
+            <li><a href="index.html">Студія</a></li>
+            <li><a href="index.html">Портфоліо</a></li>
+            <li><a href="index.html">Контакти</a></li>
+        </ul>
+    </nav>
+    <div class="header-contact">
+        <a href="mailto:info@devstudio.com" class="contact marginr-30">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i> 
+            info@devstudio.com
+        </a>
+        <a href="tel:+380961111111" class="contact">
+            <i class="fa fa-mobile" aria-hidden="true"></i> 
+            +38 096 111 11 11
+        </a>
+    </div>
+</header>
 <!-- Header end -->
 <!-- Main begin -->    
     <main>
 <!-- Effective solution begin -->
         <div class="effective-solutions">
-            <h1 class="slogan">Ефективні рішення для вашого бізнесу</h1>
+            <h1 class="slogan text-uppercase white">Ефективні рішення для вашого бізнесу</h1>
+            <!--
             <button type="button" class="btn-blue">Замовити послугу</button>
+            -->
+            <a class="btn-blue" href="#openModal">Замовити послугу</a>
         </div>
 <!-- Effective solution end -->
+<!-- Modal Window begin-->
+<div id="openModal" class="modal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title"></h3>
+          <a href="#close" title="Close" class="close">×</a>
+        </div>
+        <form action="request.php" method="post">
+            <div class="modal-body ">    
+                <p class="input-title">Залиште свої дані, ми вам передзвонимо</p>
+                <p>Ім'я</p>
+                    <div class="input-group">
+                        <span><i class="fa fa-user icon" aria-hidden="true"></i></span>
+                        <input class="input-field" name="name" type="text" placeholder="">
+                    </div>
+                <p>Телефон</p>
+                    <div class="input-group">
+                        <span><i class="fa fa-phone icon" aria-hidden="true"></i></span>
+                        <input class="input-field" name="phone" type="text" placeholder="">
+                    </div>
+                <p>Пошта</p>
+                    <div class="input-group">
+                        <span><i class="fa fa-envelope-o icon" aria-hidden="true"></i></span>
+                        <input class="input-field" name="email" type="text" placeholder="">
+                    </div>
+                <p>Коментар</p>
+                    <div class="input-group">
+                        <textarea name="comment" rows="6" cols="65" placeholder=""></textarea>
+                    </div>          
+                <div>
+                    <input type="checkbox" id="rules" name="rules">
+                    <label for="rules">Погоджуюся з розсилкою та приймаю <span class="active">Умови договору</span></label>
+                </div>
+                <button class="btn-signup" type="button">Відправти<span></span>   <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+            </div>
+        </form>
+      </div>
+    </div>
+</div>
+<!-- Modal Window end-->
 <!-- Values begin -->
+    <div class="group">
         <div class="values">
             <div class="value-card marginr-30">
                 <img class="values-icon" src="images/icon_antenna.png" alt="УВАГА ДО ДЕТАЛЕЙ">
-                <p class="values-title">УВАГА ДО ДЕТАЛЕЙ</p>
-                <p class="values-text">Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
+                <h3 class="text-uppercase dark">УВАГА ДО ДЕТАЛЕЙ</h3>
+                <p>Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.</p>
             </div>
             <div class="values-card marginr-30">
                 <img class="values-icon" src="images/icon_astronaut.png" alt="ПУНКТУАЛЬНІСТЬ">
-                <p class="values-title">ПУНКТУАЛЬНІСТЬ</p>
-                <p class="values-text">Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
+                <h3 class="text-uppercase dark">ПУНКТУАЛЬНІСТЬ</h3>
+                <p>Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.</p>
             </div>
             <div class="values-card marginr-30">
                 <img class="values-icon" src="images/icon_diagram.png" alt="ПЛАНУВАННЯ">
-                <p class="values-title">ПЛАНУВАННЯ</p>
-                <p class="values-text">Так само консультація з широким активом значною мірою зумовлює.</p>
+                <h3 class="text-uppercase dark">ПЛАНУВАННЯ</h3>
+                <p>Так само консультація з широким активом значною мірою зумовлює.</p>
             </div>
             <div class="values-card">
                 <img class="values-icon" src="images/icon_clock.png" alt="СУЧАСНІ ТЕХНОЛОГІЇ">
-                <p class="values-title">СУЧАСНІ ТЕХНОЛОГІЇ</p>
-                <p class="values-text">Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
+                <h3 class="text-uppercase dark">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+                <p>Значимість цих проблем настільки очевидна, що реалізація планових завдань.</p>
             </div>
         </div>
+    </div>
 <!-- Values end -->
 <!-- Solutions begin -->
+    <div class="group">
+        <h2>Чим ми займаємося</h2>
         <div class="solutions">
-            <h2 class="solutions-title">Чим ми займаємося</h2>
-            <div class="solutions-gr">
-                <div class="solutions-card sc-bg img1 marginr-30">
-                    <div class="solutions-info">
-                        Десктопні додатки
-                    </div>
+            <div class="solutions-card img1 marginr-30">
+                <div class="solutions-info">
+                    Десктопні додатки
                 </div>
-                <div class="solutions-card sc-bg img2 marginr-30">
-                    <div class="solutions-info">
-                        Мобільні додатки
-                    </div>
+            </div>
+            <div class="solutions-card img2 marginr-30">
+                <div class="solutions-info">
+                    Мобільні додатки
                 </div>
-                <div class="solutions-card sc-bg img3">
-                    <div class="solutions-info">
-                        Дизайнерські рішення
-                    </div>
+            </div>
+            <div class="solutions-card img3">
+                <div class="solutions-info">
+                    Дизайнерські рішення
                 </div>
             </div>
         </div>
+    </div>
 <!-- Solutions end -->
 <!-- Our team begin -->
-        <div class="our-team">
-            <h2 class="our-team-title">Наша команда</h2>
-            <div class="our-team-gr">
+    <div class="group paddingt-95"> 
+        <h2>Наша команда</h2>
+            <div class="our-team">
                 <div class="our-team-card marginr-30">
                     <img class="photo" src="images/card_photo_1.jpg" alt="Ігор Дем'яненко">
                     <p class="name">Ігор Дем'яненко</p>
                     <p class="position">Product Designer</p>
-                    <div class="team-social-gr">
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/instagram.svg" alt="Instagram"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/twitter.svg" alt="Twitter"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/facebook.svg" alt="Facebook"></a></div>
-                        <div class="team-social"><a href="#"><img class="team-social-icon" src="images/social/linkedin.svg" alt="Linkidin"></a></div>
-                    </div>
-                </div>
+                        <ul class="social social-margin">
+                            <li>
+                                <a href="#">
+                                    <div class="social-icon marginr-10">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="social-icon marginr-10">
+                                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="social-icon marginr-10">
+                                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="social-icon">
+                                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+               </div>
                 <div class="our-team-card marginr-30">
                     <img class="photo" src="images/card_photo_2.jpg" alt="Ольга Рєпіна">
                     <p class="name">Ольга Рєпіна</p>
                     <p class="position">Frontend Developer</p>
-                    <div class="team-social-gr">
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/instagram.svg" alt="Instagram"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/twitter.svg" alt="Twitter"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/facebook.svg" alt="Facebook"></a></div>
-                        <div class="team-social"><a href="#"><img class="team-social-icon" src="images/social/linkedin.svg" alt="Linkidin"></a></div>
-                    </div>                    
+                    <ul class="social social-margin">
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>                 
                 </div>
                 <div class="our-team-card marginr-30">
                     <img class="photo" src="images/card_photo_3.jpg" alt="Микола Тарасов">
                     <p class="name">Микола Тарасов</p>
                     <p class="position">Marketing</p>
-                    <div class="team-social-gr">
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/instagram.svg" alt="Instagram"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/twitter.svg" alt="Twitter"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/facebook.svg" alt="Facebook"></a></div>
-                        <div class="team-social"><a href="#"><img class="team-social-icon" src="images/social/linkedin.svg" alt="Linkidin"></a></div>
-                    </div>
+                    <ul class="social social-margin">
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul> 
                 </div>
                 <div class="our-team-card">
                     <img class="photo" src="images/card_photo_4.jpg" alt="Михайло Єрмаков">
                     <p class="name">Михайло Єрмаков</p>
                     <p class="position">UI Designer</p>
-                    <div class="team-social-gr">
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/instagram.svg" alt="Instagram"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/twitter.svg" alt="Twitter"></a></div>
-                        <div class="team-social marginr-10"><a href="#"><img class="team-social-icon" src="images/social/facebook.svg" alt="Facebook"></a></div>
-                        <div class="team-social"><a href="#"><img class="team-social-icon" src="images/social/linkedin.svg" alt="Linkidin"></a></div>
-                    </div>
+                    <ul class="social social-margin">
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon marginr-10">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="social-icon">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </div>
+                            </a>
+                        </li>
+                    </ul> 
                 </div>
             </div>
-        </div>
-<!-- Our team end -->       
-
-
-<!-- Our customers begin -->
-<div class="our-customers">
-    <h2 class="our-customers-title">Постійні клієнти</h2>
-    <div class="our-customers-gr">
-        <div class="our-customers-card marginr-30">
-            <a href="#"><img class="our-customers-logo" src="images/customers/customer01.svg" alt="Customer 01"></a>
-        </div>
-        <div class="our-customers-card marginr-30">
-            <a href="#"><img class="our-customers-logo" src="images/customers/customer02.svg" alt="Customer 02"></a>
-        </div>
-        <div class="our-customers-card marginr-30">
-            <a href="#"><img class="our-customers-logo" src="images/customers/customer03.svg" alt="Customer 03"></a>
-        </div>
-        <div class="our-customers-card marginr-30">
-            <a href="#"><img class="our-customers-logo" src="images/customers/customer04.svg" alt="Customer 04"></a>
-        </div>
-        <div class="our-customers-card marginr-30">
-            <a href="#"><img class="our-customers-logo" src="images/customers/customer05.svg" alt="Customer 05"></a>
-        </div>
-        <div class="our-customers-card">
-            <a href="#"><img class="our-customers-logo" src="images/customers/customer06.svg" alt="Customer 06"></a>
-        </div>                                
     </div>
+<!-- Our team end -->       
+<!-- Our customers begin -->
+<div class="group paddingt-95">
+        <h2>Постійні клієнти</h2>
+        <div class="our-customers-gr">
+            <div class="our-customers-card marginr-30">
+                <a href="#"><img class="our-customers-logo" src="images/customers/customer01.svg" alt="Customer 01"></a>
+            </div>
+            <div class="our-customers-card marginr-30">
+                <a href="#"><img class="our-customers-logo" src="images/customers/customer02.svg" alt="Customer 02"></a>
+            </div>
+            <div class="our-customers-card marginr-30">
+                <a href="#"><img class="our-customers-logo" src="images/customers/customer03.svg" alt="Customer 03"></a>
+            </div>
+            <div class="our-customers-card marginr-30">
+                <a href="#"><img class="our-customers-logo" src="images/customers/customer04.svg" alt="Customer 04"></a>
+            </div>
+            <div class="our-customers-card marginr-30">
+                <a href="#"><img class="our-customers-logo" src="images/customers/customer05.svg" alt="Customer 05"></a>
+            </div>
+            <div class="our-customers-card">
+                <a href="#"><img class="our-customers-logo" src="images/customers/customer06.svg" alt="Customer 06"></a>
+            </div>                                
+        </div>
 </div>
 <!-- Our customers end -->   
-
-
     </main>
 <!-- Main end-->
 <!-- Footer begin -->
-    <footer class="footer">
-        <address class="addr">
-            <p class="footer-logo"><a href="index.html" class="logo"><span class="blue">Web</span><span class="white">Studio</span></a></p>
-            <ul>
+    <footer class="footer white">
+        <div class="footer-group">
+            <p class="marginb-20"><a href="index.html" class="logo"><span class="blue">Web</span><span class="white">Studio</span></a></p>
+            <ul class="addr width-230">
                 <li>м. Київ, пр-т Лесі Українки, 26</li>
                 <li>info@devstudio.com</li>
                 <li>+38 096 111 11 11</li>
             </ul>
-        </address>
-        <div class="footer-social-gr">
-            <p class="footer-social-title">Приєднуйтесь</p>
-            <div class="footer-social-line">
-                <div class="footer-social marginr-10"><a href="#"><img class="footer-social-icon" src="images/social/instagram.svg" alt="Instagram"></a></div>
-                <div class="footer-social marginr-10"><a href="#"><img class="footer-social-icon" src="images/social/twitter.svg" alt="Twitter"></a></div>
-                <div class="footer-social marginr-10"><a href="#"><img class="footer-social-icon" src="images/social/facebook.svg" alt="Facebook"></a></div>
-                <div class="footer-social"><a href="#"><img class="footer-social-icon" src="images/social/linkedin.svg" alt="Linkidin"></a></div>
-            </div>
+        </div>
+        <div class="footer-group">
+            <p class="footer-group-title">Приєднуйтесь</p>
+            <ul class="social">
+                <li>
+                    <a href="#">
+                        <div class="social-icon white bg-gray marginr-10">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="social-icon white bg-gray marginr-10">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="social-icon white bg-gray marginr-10">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="social-icon white bg-gray">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div> 
-        <div>
-            <p class="footer-social-title">Підпишіться на розсилку</p>
+        <div class="footer-group">
+            <p class="footer-group-title width-570">Підпишіться на розсилку</p>
             <input class="email" type="text" value="E-mail">
-            <button class="btn-signup" type="button">Підписатися<span></span><img class="btn-telegram" src="images/social/telegram.svg" alt="Instagram"></button>
+            <button class="btn-signup" type="button">Підписатися<span></span>   <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
         </div>
     </footer>
 <!--Footer end -->
